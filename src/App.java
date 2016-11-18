@@ -7,6 +7,10 @@ public class App {
 		 * cijelih, vi odluèite). Nakon što je korisnik unio niz brojeva (niz !=
 		 * array, ne nužno), program treba da vrati:
 		 */
+	
+	
+	
+	
 	}
 
 	/*
@@ -44,7 +48,12 @@ public class App {
 	 * Metoda treba da vrati: Prosjek brojeva u nizu
 	 */
 	public static void sumArray(int[] array) {
-
+		
+		double sum = 0;
+		for (int i = 0; i < array.length; i++ ) {
+			sum += array[i];
+		}
+		System.out.printf("Suma svih brojeva u nizu je %.2f.",sum);
 	}
 
 	/*
@@ -52,7 +61,14 @@ public class App {
 	 */
 
 	public static void averageNumArray(int[] array) {
-
+		
+		double sum = 0;
+		for (int i = 0; i < array.length; i++ ) {
+			sum += array[i];
+		}
+		double average = sum / array.length;
+		System.out.printf("Prosjek svih brojeva u nizu je %.2f.",average);
+		
 	}
 
 	/*
