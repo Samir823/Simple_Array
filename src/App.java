@@ -13,15 +13,32 @@ public class App {
 	 * Metoda treba da vrati: Najmanji broj u nizu
 	 */
 	public static void smalestNum(int[] array) {
-
-	}
+		
+		    int minValue = array[0];
+		    for (int i = 1; i < array.length; i++) {
+		        if (array[i] < minValue) {
+		            minValue = array[i];
+		        }
+		    }
+		    System.out.println("Najmanji broj u nizu je " + minValue);
+		}
 
 	/*
 	 * Metoda treba da vrati: Najveæi broj u nizu
 	 */
 	public static void largestNumArray(int[] array) {
+	
+		    int maxValue = array[0];
+		    for (int i = 1; i < array.length; i++) {
+		        if (array[i] > maxValue) {
+		            maxValue = array[i];
+		        }
+		    }
+		    System.out.println("Najveci broj u nizu je " + maxValue);
+		}
 
-	}
+
+	
 
 	/*
 	 * Metoda treba da vrati: Prosjek brojeva u nizu
@@ -45,13 +62,7 @@ public class App {
 
 	}
 
-	/*
-	 * Metoda treba da vrati: Prosjek brojeva u nizu
-	 */
-	public static void smalestNumArray(int[] array) {
-
-	}
-
+	
 	/*
 	 * Metoda treba da vrati: Unijeti niz,sortiran od najmanjeg ka najveæem
 	 * broju
