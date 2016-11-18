@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -54,7 +56,17 @@ public class App {
 	 * Metoda treba da vrati: Sve unikatne brojeve u nizu
 	 */
 	public static void uniqueNumArray(int[] array) {
-
+		int[] rezervni = array.clone();
+		Arrays.sort(rezervni);
+		System.out.println("Unique numbers in array are: ");
+		try {
+			System.out.print(rezervni[0] + " ");
+			for (int i = 1; i < rezervni.length; i++)
+				if (rezervni[i] != rezervni[i - 1])
+					System.out.print(rezervni[i] + " ");
+		} catch (IndexOutOfBoundsException e) {
+			e.printStackTrace();
+		}		
 	}
 
 	/*
@@ -69,6 +81,11 @@ public class App {
 	 * broju
 	 */
 	public static void sortArray(int[] array) {
-
+		int[] sortiran = array.clone();
+		Arrays.sort(sortiran);
+		System.out.println("Sorted: ");
+		for (int i : sortiran) {
+			System.out.print(i + " ");
+		}
 	}
 }
